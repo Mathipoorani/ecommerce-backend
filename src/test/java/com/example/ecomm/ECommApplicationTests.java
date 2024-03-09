@@ -29,9 +29,7 @@ public class ECommApplicationTests {
 	@Test
 	public void getUsersTest(){
 		when(userRepository.findAll()).thenReturn(
-				Stream.of(new User("Dharani",
-						"Dharani0802", "dharani.rajasekaran@atos.net",
-						"i8123483324", 1, "")).collect(Collectors.toList()));
+				Stream.of().collect(Collectors.toList()));
 		assertEquals(1, userService.getUsers().size());
 	}
 
